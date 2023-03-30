@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import NavbarAfter from "../Components/Navbar/NavbarAfter";
-import LinkGradient from "../Components/Assets/LinkGradient";
+import NavbarInvestor from "../Components/Navbar/NavbarInvestor";
 import ButtonGradient from "../Components/Assets/ButtonGradient";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
-import Card from "../Components/StartupList/Card";
+import CardInvestor from "../Components/InvestorList/CardInvestor";
 import axios from "axios";
 
-const startupList = () => {
+const InvestorList = () => {
   const [lists, setLists] = useState([]);
   axios
-    .get("http://localhost:3000/",{
+    .get("http://localhost:3000/investor",{
       headers : {
         'auth-token' : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJ1c2VyIiwiaWF0IjoxNjc4NjkxMjY1fQ.db77MdKBk9J0-C0roE7WVPOQUrG9Eb43pS_dsgEg-iE"
       }
@@ -25,16 +24,9 @@ const startupList = () => {
   return (
     <>
     {/* {console.log(lists)} */}
-      <NavbarAfter />
-      <div className="my-12 shadow-xl mx-24 rounded-2xl text-Blue80 bg-StartupList bg-cover h-[60vh]">
-        <div className="flex justify-center items-start flex-col h-full pl-12 w-1/2">
-          <h1 className="text-4xl font-bold ">Pitch Deck Online</h1>
-          <p className="text-md font-semibold my-2">
-            A pitch deck online is a visual presentation that provides a concise
-            overview of a business or idea to potential investors or partners.
-          </p>
-          <LinkGradient LinkTo="/" TextLink="Continue" />
-        </div>
+      <NavbarInvestor />
+      <div className="my-12 mx-24 rounded-2xl text-black text-4xl font-bold ">
+        <h1>Investor List</h1>
       </div>
 
       <div className="search mx-24">
@@ -50,7 +42,7 @@ const startupList = () => {
 
       <div className="mx-24 py-10">
         <Link to="/" className="text-xl text-Blue80 font-semibold">
-          Al
+          All
         </Link>
         <Link to="/" className="text-xl text-Blue40 font-semibold ml-8">
           Food and Beverage
@@ -68,11 +60,11 @@ const startupList = () => {
 
       <div className="justify-center items-center flex flex-wrap">
         {lists.map((list)=>(
-          <Card title={list.namaStartup} description={list.description} key={list.namaStartup}/>
+          <CardInvestor title={list.namaInvestor} key={list.namaStartup}/>
         ))}
       </div>
       <Footer />
     </>
   );
 };
-export default startupList;
+export default InvestorList;
