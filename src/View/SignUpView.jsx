@@ -1,5 +1,5 @@
 import SignUpPic from "../assets/SignUp.png";
-import Logo3 from "../assets/Logo3.png";
+import Logo3 from "../assets/logo3.png";
 import { Link } from "react-router-dom";
 import Google from "../assets/Logo/Google.png";
 
