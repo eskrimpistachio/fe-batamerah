@@ -31,7 +31,7 @@ const startupList = () => {
           <h1 className="text-4xl font-bold ">Pitch Deck Online</h1>
           <p className="text-md font-semibold my-2">
             A pitch deck online is a visual presentation that provides a concise
-            overview of a business or idea to potential investors or partners.
+            overview of a business or idea to potential investors or partners
           </p>
           <LinkGradient LinkTo="/" TextLink="Continue" />
         </div>
