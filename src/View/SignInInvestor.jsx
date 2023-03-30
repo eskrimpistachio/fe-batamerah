@@ -1,6 +1,6 @@
 import SignInPic from "../assets/SignInPic.png";
-import Logo3 from "../assets/Logo3.png";
-import { Link, useNavigate } from "react-router-dom";
+import Logo3 from "../assets/logo3.png";
+import { Link, useNavigate } frosm "react-router-dom";
 import Google from "../assets/Logo/Google.png";
 import React, { useEffect, useRef, useState } from "react";
 import AuthService from "../Components/Auth/AuthService";
