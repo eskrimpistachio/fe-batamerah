@@ -1,5 +1,5 @@
 import SignInPic from "../assets/SignInPic.png";
-import Logo3 from "../assets/Logo3.png";
+import Logo3 from "../assets/logo3.png";
 import { Link } from "react-router-dom";
 import LinkGradient from "../Components/Assets/LinkGradient";
 
